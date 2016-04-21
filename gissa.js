@@ -40,7 +40,7 @@ var megaMind = {
       } else if (_.isString(context.guess)) {
          context.state='guess';
          context.latestYesNo=answer;
-         callback('Tänker du på en '+context.guess);
+         callback('Tänker du på '+context.guess);
       } else {
          context.currentGuess=context.guess;
          askQuestion(context, callback);
@@ -50,7 +50,7 @@ var megaMind = {
    guess: function(answer, context, callback) {
       if ('ja' === answer) {
          context.state='start';
-         callback('Jag visste väl det! Vill du köra igan?');
+         callback('Jag visste väl det! Vill du köra igen?');
       } else {
          context.state='learn_1';
          console.log('Ajdå, vad tänker du på?');
